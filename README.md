@@ -1,5 +1,5 @@
 # Get-just-URLs-from-dirsearch-output
-When using dirsearch, I found that it saved the subdirectories found along with the status code and the size of the file found in subdirectories. This made it difficult to easily pass this output into another tool, that accepted only URLs and lists of URLs as input, such as gau. 
+When using dirsearch, I found that it saved the subdirectories found along with the status code and the size of the file found in subdirectories. This made it difficult to easily pass this output into another tool, that accepted only URLs and lists of URLs as input. 
 
 Dirsearch also often returned duplicate subdirectories due to the wordlist I was using being case sensitive. 
 
@@ -12,4 +12,3 @@ I have a couple of bugs/limitations currently that I am working on.
 
 References:
 https://github.com/maurosoria/dirsearch
-https://github.com/lc/gau
