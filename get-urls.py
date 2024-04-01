@@ -3,7 +3,6 @@ import sys
 #as dirsearch output is written in the format: status code, file size, url - we take the last option from each line.
 def extract_url(line):
     parts = line.split()
-    print(parts)
     try:
     #gets all urls, ignoring top & empty lines of dirsearch output (command, empty line)
         if 'http' in parts[-1]: 
@@ -19,7 +18,9 @@ def get_urls_from_lines(lines):
         url = extract_url(line)
         urls.append(url)
     #return the list without duplicates for added cleanup
-    return list(set(urls))
+    urls = list(set(urls))
+    #urls = urls[:1000]
+    return urls
 
 def main():
     if len(sys.argv) != 2:
